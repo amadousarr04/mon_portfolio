@@ -1,0 +1,76 @@
+export const personal = {
+  name: 'Amadou Dieye SARR',
+  role: 'Développeur Full Stack & Infographiste',
+  location: 'Mbacké, Diourbel, Sénégal',
+  email: 'amadou.sarr.38018@gmail.com',
+  phone: '+221 78 124 08 21',
+  linkedin: '',
+  github: '',
+  bio: `Étudiant en Master 2 en Systèmes d’Information à l’Université Alioune Diop de Bambey, passionné par l’innovation technologique, l’Intelligence Artificielle et le Cloud Computing. Polyvalent en conception d’interfaces, développement full stack et design graphique, je conçois des solutions innovantes, performantes et esthétiques, du design UI/UX jusqu’au déploiement cloud.`
+}
+
+export const skills = [
+  {
+    category: 'Langages',
+    items: ['JavaScript', 'Python', 'Java', 'C', 'PHP (Laravel)', 'Flutter']
+  },
+  {
+    category: 'Web & Mobile',
+    items: ['HTML', 'CSS', 'Tailwind CSS', 'Laravel', 'Spring Boot', 'Angular', 'Flutter']
+  },
+  {
+    category: 'Data & IA',
+    items: ['Traitement & analyse de données', 'Machine Learning', 'Deep Learning']
+  },
+  {
+    category: 'Bases de données',
+    items: ['MySQL', 'Oracle', 'PostgreSQL']
+  },
+  {
+    category: 'DevOps & Virtualisation',
+    items: ['Docker', 'Git', 'VMware', 'VirtualBox', 'AWS']
+  },
+  {
+    category: 'Design',
+    items: ['Photoshop', 'Illustrator', 'Figma', 'Canva', 'Adobe XD']
+  }
+]
+
+export const projects = [
+  {
+    id: 1,
+    title: 'Projet IA – Prédiction de rendement agricole',
+    description: 'Analyse de données agricoles (2010–2022), modèles de régression pour prédire les rendements.',
+    tech: ['Python', 'Pandas', 'Scikit-learn', 'Matplotlib'],
+    type: 'Projet académique (2024)'
+  },
+  {
+    id: 2,
+    title: 'Projet IoT – Arrosage intelligent automatisé',
+    description: "Système connecté basé sur capteurs d’humidité + ESP8266 + notifications app.",
+    tech: ['C++', 'ESP8266', 'Arduino', 'Flutter'],
+    type: 'Projet académique (2024)'
+  },
+  {
+    id: 3,
+    title: 'Projet Virtualisation – Environnement de test',
+    description: 'Mise en place d’un environnement virtualisé pour tests d’applications.',
+    tech: ['VMware', 'VirtualBox', 'Linux'],
+    type: 'Projet académique (2023)'
+  },
+  {
+    id: 4,
+    title: 'Infographiste Freelance',
+    description: 'Conception de logos, affiches, identités visuelles, supports graphiques.',
+    tech: ['Photoshop', 'Illustrator', 'Figma'],
+    type: 'Freelance (2022-présent)'
+  }
+]
+
+export const education = [
+  { year: '2024-présent', title: 'Master 2 en SI — UADB' },
+  { year: '2023-2024', title: 'Master 1 en SI — UADB' },
+  { year: '2020-2023', title: 'Licence DA2A — UADB' },
+  { year: '2023', title: 'Marketing Digital — UADB' },
+  { year: '2019', title: 'Baccalauréat — Lycée de Mbacké' }
+]
