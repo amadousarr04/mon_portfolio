@@ -113,14 +113,16 @@ export default function About() {
 
             {/* Download CV button */}
             <ScrollReveal delay={0.5}>
-              <motion.button
+              <motion.a
+                href="/src/assets/cv/CV_AMADOU_DIEYE_SARR.pdf"
+                download="CV_AMADOU_DIEYE_SARR.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="w-full btn-primary flex items-center justify-center gap-2"
               >
                 <FiDownload size={18} />
                 Télécharger mon CV
-              </motion.button>
+              </motion.a>
             </ScrollReveal>
           </div>
         </div>

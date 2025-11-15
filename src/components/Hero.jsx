@@ -149,14 +149,16 @@ export default function Hero() {
             >
               Voir mes projets
             </motion.a>
-            <motion.button
+            <motion.a
+              href="/src/assets/cv/CV_AMADOU_DIEYE_SARR.pdf"
+              download="CV_AMADOU_DIEYE_SARR.pdf"
               className="btn-outline flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <FiDownload size={18} />
               CV
-            </motion.button>
+            </motion.a>
           </motion.div>
         </motion.div>
 
