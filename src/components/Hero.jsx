@@ -150,7 +150,7 @@ export default function Hero() {
               Voir mes projets
             </motion.a>
             <motion.a
-              href="/src/assets/cv/CV_AMADOU_DIEYE_SARR.pdf"
+              href="/cv/CV_AMADOU_DIEYE_SARR.pdf"
               download="CV_AMADOU_DIEYE_SARR.pdf"
               className="btn-outline flex items-center gap-2"
               whileHover={{ scale: 1.05 }}

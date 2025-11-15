@@ -114,7 +114,7 @@ export default function About() {
             {/* Download CV button */}
             <ScrollReveal delay={0.5}>
               <motion.a
-                href="/src/assets/cv/CV_AMADOU_DIEYE_SARR.pdf"
+                href="/cv/CV_AMADOU_DIEYE_SARR.pdf"
                 download="CV_AMADOU_DIEYE_SARR.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

@@ -135,15 +135,15 @@ export const projects = [
     tech: ['Photoshop', 'Illustrator', 'Figma', 'Canva'],
     type: 'Freelance (2022-présent)',
     images: [
-      '/src/assets/affiches/07f91b012ff4497984ddb9165fb88803.jpg',
-      '/src/assets/affiches/1f9aadaf0b8a453989c1e3940b252f94.jpg',
-      '/src/assets/affiches/4bb7ac232c874a678648c81fc0db8ccd.jpg',
-      '/src/assets/affiches/59b696c33b284eb3bcf95a79c4f93f2e.jpg',
-      '/src/assets/affiches/796b3c2376684fb3b94e196896ae0c0e.jpg',
-      '/src/assets/affiches/80f23bd0255a41d4a4091884e6a44151.jpg',
-      '/src/assets/affiches/c9e6fababc9e40e2812ae618fc4b1cb5.jpg',
-      '/src/assets/affiches/cb3319100e3541be9872e65d57d75cf5.jpg',
-      '/src/assets/affiches/d124f1db39b346569bcd2b81c00595e1.jpg'
+      '/affiches/07f91b012ff4497984ddb9165fb88803.jpg',
+      '/affiches/1f9aadaf0b8a453989c1e3940b252f94.jpg',
+      '/affiches/4bb7ac232c874a678648c81fc0db8ccd.jpg',
+      '/affiches/59b696c33b284eb3bcf95a79c4f93f2e.jpg',
+      '/affiches/796b3c2376684fb3b94e196896ae0c0e.jpg',
+      '/affiches/80f23bd0255a41d4a4091884e6a44151.jpg',
+      '/affiches/c9e6fababc9e40e2812ae618fc4b1cb5.jpg',
+      '/affiches/cb3319100e3541be9872e65d57d75cf5.jpg',
+      '/affiches/d124f1db39b346569bcd2b81c00595e1.jpg'
     ]
   }
 ]
