@@ -104,9 +104,9 @@ export default function About() {
                       viewport={{ once: true }}
                       className="text-4xl font-bold gradient-text mb-2"
                     >
-                      14+
+                      15+
                     </motion.div>
-                    <p className="text-white/60 text-sm">Projets réalisés</p>
+                    <p className="text-white/60 text-sm">Projets Réalisés</p>
                   </div>
                   <div className="text-center">
                     <motion.div
@@ -116,7 +116,7 @@ export default function About() {
                       transition={{ delay: 0.1 }}
                       className="text-4xl font-bold gradient-text mb-2"
                     >
-                      3+
+                      5+
                     </motion.div>
                     <p className="text-white/60 text-sm">Années d'études</p>
                   </div>

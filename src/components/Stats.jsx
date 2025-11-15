@@ -3,8 +3,8 @@ import { motion } from 'framer-motion'
 import ScrollReveal from './ScrollReveal'
 
 const statsData = [
-  { id: 1, value: 50, suffix: '+', label: 'Projets Réalisés' },
-  { id: 2, value: 5, suffix: '+', label: 'Années d\'Expérience' },
+  { id: 1, value: 15, suffix: '+', label: 'Projets Réalisés' },
+  { id: 2, value: 4, suffix: '+', label: 'Années d\'Expérience' },
   { id: 3, value: 30, suffix: '+', label: 'Clients Satisfaits' },
   { id: 4, value: 15, suffix: '+', label: 'Technologies Maîtrisées' },
 ]
