@@ -12,120 +12,219 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="py-20 relative">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-600/10 via-transparent to-accent-purple/10 blur-3xl" />
+    <section id="about" className="py-20 relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary-600/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-purple/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary-600/10 to-accent-purple/10 rounded-full blur-3xl" />
+      </div>
 
-      <div className="relative max-w-6xl mx-auto px-6">
+      <div className="relative max-w-7xl mx-auto px-6">
         <ScrollReveal>
-          <div className="text-center mb-12">
-            <h2 className="section-title">À Propos de Moi</h2>
-            <p className="text-white/60 mt-4 max-w-2xl mx-auto">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              className="inline-block"
+            >
+              <span className="px-4 py-2 rounded-full bg-gradient-to-r from-primary-600/20 to-accent-purple/20 text-primary-400 text-sm font-medium border border-primary-500/20 mb-4 inline-block">
+                Découvrez mon profil
+              </span>
+            </motion.div>
+            <h2 className="section-title mt-4">À Propos de Moi</h2>
+            <p className="text-white/60 mt-4 max-w-2xl mx-auto text-lg">
               Passionné par l'innovation technologique et la création d'expériences digitales exceptionnelles
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Main Bio */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          {/* Profile Card */}
           <ScrollReveal delay={0.1}>
             <motion.div
-              whileHover={{ y: -4 }}
-              className="lg:col-span-2 glass-card p-8 rounded-2xl border border-white/5"
+              whileHover={{ y: -8 }}
+              className="glass-card p-8 rounded-3xl border border-white/10 relative overflow-hidden group"
             >
-              <h3 className="text-2xl font-semibold gradient-text mb-6">
-                Qui suis-je ?
-              </h3>
-              <div className="space-y-4 text-white/70 leading-relaxed">
-                <p>{personal.bio}</p>
-                <p>
-                  Mon approche combine rigueur technique et créativité pour concevoir des solutions 
-                  innovantes qui répondent aux besoins réels des utilisateurs. Je suis constamment 
-                  en veille technologique pour maîtriser les dernières tendances en développement et design.
-                </p>
-              </div>
+              {/* Gradient Overlay on Hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-600/0 to-accent-purple/0 group-hover:from-primary-600/10 group-hover:to-accent-purple/10 transition-all duration-500 rounded-3xl" />
+              
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-600 to-accent-purple p-1">
+                    <div className="w-full h-full rounded-xl bg-dark-800 flex items-center justify-center">
+                      <span className="text-3xl font-bold gradient-text">AS</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-1">{personal.name}</h3>
+                    <p className="text-primary-400 font-medium">{personal.role}</p>
+                  </div>
+                </div>
 
-              {/* Contact info */}
-              <div className="mt-8 pt-6 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex items-center gap-3 text-sm">
-                  <div className="p-2 rounded-lg bg-primary-500/10">
-                    <FiMapPin className="text-primary-400" size={18} />
-                  </div>
-                  <div>
-                    <p className="text-white/50 text-xs">Localisation</p>
-                    <p className="text-white/90">{personal.location}</p>
-                  </div>
+                <div className="space-y-4 text-white/70 leading-relaxed">
+                  <p>{personal.bio}</p>
+                  <p>
+                    Mon approche combine rigueur technique et créativité pour concevoir des solutions 
+                    innovantes qui répondent aux besoins réels des utilisateurs. Je suis constamment 
+                    en veille technologique pour maîtriser les dernières tendances en développement et design.
+                  </p>
                 </div>
-                <div className="flex items-center gap-3 text-sm">
-                  <div className="p-2 rounded-lg bg-primary-500/10">
-                    <FiMail className="text-primary-400" size={18} />
-                  </div>
-                  <div>
-                    <p className="text-white/50 text-xs">Email</p>
-                    <p className="text-white/90 truncate">{personal.email}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 text-sm">
-                  <div className="p-2 rounded-lg bg-primary-500/10">
-                    <FiPhone className="text-primary-400" size={18} />
-                  </div>
-                  <div>
-                    <p className="text-white/50 text-xs">Téléphone</p>
-                    <p className="text-white/90">{personal.phone}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 text-sm">
-                  <div className="p-2 rounded-lg bg-primary-500/10">
-                    <FiAward className="text-primary-400" size={18} />
-                  </div>
-                  <div>
-                    <p className="text-white/50 text-xs">Niveau</p>
-                    <p className="text-white/90">Master 2 en SI</p>
-                  </div>
-                </div>
+
+                {/* Download CV button */}
+                <motion.a
+                  href="/cv/CV_AMADOU_DIEYE_SARR.pdf"
+                  download="CV_AMADOU_DIEYE_SARR.pdf"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="mt-6 btn-primary flex items-center justify-center gap-2 w-full"
+                >
+                  <FiDownload size={18} />
+                  Télécharger mon CV
+                </motion.a>
               </div>
             </motion.div>
           </ScrollReveal>
 
-          {/* Highlights sidebar */}
+          {/* Stats & Highlights */}
           <div className="space-y-6">
+            {/* Quick Stats */}
+            <ScrollReveal delay={0.2}>
+              <motion.div
+                whileHover={{ y: -8 }}
+                className="glass-card p-8 rounded-3xl border border-white/10"
+              >
+                <h4 className="text-xl font-semibold gradient-text mb-6">En chiffres</h4>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      className="text-4xl font-bold gradient-text mb-2"
+                    >
+                      14+
+                    </motion.div>
+                    <p className="text-white/60 text-sm">Projets réalisés</p>
+                  </div>
+                  <div className="text-center">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.1 }}
+                      className="text-4xl font-bold gradient-text mb-2"
+                    >
+                      3+
+                    </motion.div>
+                    <p className="text-white/60 text-sm">Années d'études</p>
+                  </div>
+                  <div className="text-center">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.2 }}
+                      className="text-4xl font-bold gradient-text mb-2"
+                    >
+                      10+
+                    </motion.div>
+                    <p className="text-white/60 text-sm">Technologies</p>
+                  </div>
+                  <div className="text-center">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.3 }}
+                      className="text-4xl font-bold gradient-text mb-2"
+                    >
+                      100%
+                    </motion.div>
+                    <p className="text-white/60 text-sm">Engagement</p>
+                  </div>
+                </div>
+              </motion.div>
+            </ScrollReveal>
+
+            {/* Highlights Cards */}
             {highlights.map((item, index) => {
               const Icon = item.icon
               return (
-                <ScrollReveal key={index} delay={0.2 + index * 0.1}>
+                <ScrollReveal key={index} delay={0.3 + index * 0.1}>
                   <motion.div
-                    whileHover={{ scale: 1.05, x: 4 }}
-                    className="glass-card p-6 rounded-2xl border border-white/5 hover:border-primary-500/30 transition-all"
+                    whileHover={{ x: 8, y: -4 }}
+                    className="glass-card p-6 rounded-2xl border border-white/10 hover:border-primary-500/30 transition-all group"
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-xl bg-gradient-to-br from-primary-600/20 to-accent-purple/20">
-                        <Icon className="text-primary-400" size={24} />
-                      </div>
+                    <div className="flex items-center gap-4">
+                      <motion.div
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                        className="p-4 rounded-xl bg-gradient-to-br from-primary-600/20 to-accent-purple/20 group-hover:from-primary-600/30 group-hover:to-accent-purple/30 transition-all"
+                      >
+                        <Icon className="text-primary-400" size={28} />
+                      </motion.div>
                       <div className="flex-1">
                         <p className="text-white/50 text-sm mb-1">{item.label}</p>
-                        <p className="text-white font-semibold">{item.value}</p>
+                        <p className="text-white font-semibold text-lg">{item.value}</p>
                       </div>
                     </div>
                   </motion.div>
                 </ScrollReveal>
               )
             })}
-
-            {/* Download CV button */}
-            <ScrollReveal delay={0.5}>
-              <motion.a
-                href="/cv/CV_AMADOU_DIEYE_SARR.pdf"
-                download="CV_AMADOU_DIEYE_SARR.pdf"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full btn-primary flex items-center justify-center gap-2"
-              >
-                <FiDownload size={18} />
-                Télécharger mon CV
-              </motion.a>
-            </ScrollReveal>
           </div>
         </div>
+
+        {/* Contact Info Cards */}
+        <ScrollReveal delay={0.6}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div
+              whileHover={{ y: -4 }}
+              className="glass-card p-6 rounded-2xl border border-white/10 text-center group"
+            >
+              <div className="inline-block p-4 rounded-xl bg-gradient-to-br from-primary-600/20 to-accent-purple/20 mb-4 group-hover:scale-110 transition-transform">
+                <FiMapPin className="text-primary-400" size={24} />
+              </div>
+              <p className="text-white/50 text-sm mb-2">Localisation</p>
+              <p className="text-white font-semibold">{personal.location}</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -4 }}
+              className="glass-card p-6 rounded-2xl border border-white/10 text-center group"
+            >
+              <div className="inline-block p-4 rounded-xl bg-gradient-to-br from-primary-600/20 to-accent-purple/20 mb-4 group-hover:scale-110 transition-transform">
+                <FiMail className="text-primary-400" size={24} />
+              </div>
+              <p className="text-white/50 text-sm mb-2">Email</p>
+              <p className="text-white font-semibold text-sm truncate">{personal.email}</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -4 }}
+              className="glass-card p-6 rounded-2xl border border-white/10 text-center group"
+            >
+              <div className="inline-block p-4 rounded-xl bg-gradient-to-br from-primary-600/20 to-accent-purple/20 mb-4 group-hover:scale-110 transition-transform">
+                <FiPhone className="text-primary-400" size={24} />
+              </div>
+              <p className="text-white/50 text-sm mb-2">Téléphone</p>
+              <p className="text-white font-semibold">{personal.phone}</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -4 }}
+              className="glass-card p-6 rounded-2xl border border-white/10 text-center group"
+            >
+              <div className="inline-block p-4 rounded-xl bg-gradient-to-br from-primary-600/20 to-accent-purple/20 mb-4 group-hover:scale-110 transition-transform">
+                <FiAward className="text-primary-400" size={24} />
+              </div>
+              <p className="text-white/50 text-sm mb-2">Niveau</p>
+              <p className="text-white font-semibold">Master 2 en SI</p>
+            </motion.div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )
